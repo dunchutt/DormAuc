@@ -186,8 +186,8 @@ To access the admin panel of the e-commerce website, follow these steps:
 
 1. Open your web browser and navigate to the admin URL (e.g., `http://localhost/E-Commerce/login`).
 2. Login using the default admin credentials:
-   - Username: `admin`
-   - Password: `adminfahad`
+   - Username: `dunchu@gmail.com`
+   - Password: `admindunchu`
 3. Once logged in, you can manage products, orders, customers, and other administrative tasks from the admin panel.
 
 Congratulations! You have successfully installed and set up the e-commerce website on your local development environment. You can now customize the website, add your products, and explore its various features.
