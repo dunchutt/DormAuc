@@ -9,7 +9,7 @@
           <h2 class="footer-category-title">Brand directory</h2>
 
           <div class="footer-category-box">
-            <h3 class="category-box-title">Fashion :</h3>
+      <!--      <h3 class="category-box-title">Fashion :</h3>
 
             <a href="#" class="footer-category-link">T-shirt</a>
             <a href="#" class="footer-category-link">Shirts</a>
@@ -179,7 +179,7 @@
               <a href="#" class="footer-nav-link">Sitemap</a>
             </li>
           </ul>
-
+-->
           <ul class="footer-nav-list">
             <li class="footer-nav-item">
               <h2 class="nav-title">Contact</h2>
@@ -247,11 +247,11 @@
           </ul>
         </div>
       </div>
-
+<!--
       <div class="footer-bottom">
         <div class="container">
           <img src="./images/payment.png" alt="payment method" class="payment-img" />
-
+-->
           <p class="copyright">
             Copyright &copy; <a href="#"><?php echo $_SESSION['web-footer']; ?></a> all rights reserved.
           </p>
