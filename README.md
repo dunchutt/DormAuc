@@ -1,4 +1,4 @@
-# Online Auction site to specifically designed for dormitories and hostels in universities
+# Online Auction site specifically designed for dormitories and hostels in universities
 
 ## Introduction
 
