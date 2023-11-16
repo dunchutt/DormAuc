@@ -155,7 +155,7 @@ input {
 
 .Add-child-section .child-fields4::before {
     position: absolute;
-    content: "House Number or Name";
+    content: "Room Number with bed";
     top: -10px;
     background-image: linear-gradient(#FFFCF6, #FFFFFF);
     padding-left: 4px;
@@ -186,7 +186,7 @@ input {
 
 .Add-child-section .child-fields5::before {
     position: absolute;
-    content: "Street or Road";
+    content: "Building number";
     top: -10px;
     background-image: linear-gradient(#FFFCF6, #FFFFFF);
     padding-left: 4px;
@@ -217,7 +217,7 @@ input {
 
 .Add-child-section .child-fields6::before {
     position: absolute;
-    content: "Town or City";
+    content: "Phone number";
     top: -10px;
     background-image: linear-gradient(#FFFCF6, #FFFFFF);
     padding-left: 4px;
@@ -248,7 +248,7 @@ input {
 
 .Add-child-section .child-fields7::before {
     position: absolute;
-    content: "Post Code";
+    content: "Email address";
     top: -10px;
     background-image: linear-gradient(#FFFCF6, #FFFFFF);
     padding-left: 4px;
@@ -265,7 +265,7 @@ input {
     background-color: transparent;
 }
 
-.Add-child-section .child-fields8 {
+/*.Add-child-section .child-fields8 {
     width: 49%;
     height: 55px;
     border: 1px solid var( --main-maroon);
@@ -327,6 +327,7 @@ input {
     background-color: transparent;
 }
 
+
 .Add-child-section .Address-field {
     width: 100%;
     height: 55px;
@@ -357,7 +358,7 @@ input {
     font-weight: 600;
     font-size: 13px;
 }
-
+*/
 .Add-child-section .child-dob p {
     font-size: 25px;
     font-weight: 700;
@@ -504,44 +505,30 @@ input {
                             <div class="child-detail-inner">
                               
                                 <div class="child-fields child-fields4">
-                                    <input type="text" placeholder="P-134">
+                                    <input type="text" placeholder="506-1">
                                 </div>
                                 <div class="child-fields child-fields5 ">
-                                    <input type="text" placeholder="A5">
+                                    <input type="text" placeholder="1/2/3">
                                 </div>
 
                             </div>
                             <div class="child-detail-inner">
                               
                                 <div class="child-fields child-fields6">
-                                    <input type="text" placeholder="Manchester">
+                                    <input type="text" placeholder="+82 010-0000-0000">
                                 </div>
                                 <div class="child-fields child-fields7 ">
-                                    <input type="text" placeholder="38000">
+                                    <input type="text" placeholder="example@gmail.com">
                                 </div>
 
                             </div>
                             
-                            <div class="child-detail-inner">
-                              
-                                <div class="child-fields Address-field">
-                                    <input type="text" style="color: #676767;" placeholder="United kingdom">
-                                  
-                                </div>
+                           
 
                                
 
                             </div>
-                            <div class="child-detail-inner">
-                              
-                                <div class="child-fields child-fields8">
-                                    <input type="text" placeholder="+1 0000-0000-0000">
-                                </div>
-                                <div class="child-fields child-fields9">
-                                    <input type="text" placeholder="example@email.com">
-                                </div>
-
-                            </div>
+                            
                          
                             <div class="child-register-btn">
                                 <span class="error-ms"></span>
