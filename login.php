@@ -98,21 +98,21 @@ require_once 'functions/functions.php';
 
       <div class="row mb-3">
         <div class="col-sm-10">
-          <div class="form-check">
+          <!-- <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck1" />
             <label class="form-check-label" for="gridCheck1">
               Remember Me
             </label>
-          </div>
+          </div>-->
         </div>
       </div>
       <div style="float: right">
-        <button 
+        <!-- <button 
         type="submit" 
         class="btn btn-primary">
         <a href="./signup.php" id="signup-btn">
              Sign up
-		</a>
+		</a>-->
            
         </button>
 
