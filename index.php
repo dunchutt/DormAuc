@@ -767,7 +767,7 @@ $product_left = array();
     -->
     <!-- image path: ./images/blog/ -->
 
-  <div class="blog">
+  <!--<div class="blog">
     <div class="container">
       <div class="blog-container has-scrollbar">
         <div class="blog-card">
@@ -849,7 +849,7 @@ $product_left = array();
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
 </main>
 
 <?php require_once './includes/footer.php'; ?>
