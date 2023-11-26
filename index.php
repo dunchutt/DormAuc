@@ -215,8 +215,8 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">$<?php echo $row1['discounted_price']; ?></p>
-                        <del>$<?php echo $row1['product_price']; ?></del>
+                        <p class="price">₩<?php echo $row1['discounted_price']; ?></p>
+                        <del>₩<?php echo $row1['product_price']; ?></del>
                       </div>
                     </div>
                   </div>
@@ -261,10 +261,10 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                            $<?php echo $row2['discounted_price']; ?>
+                          ₩<?php echo $row2['discounted_price']; ?>
                           </p>
                           <del>
-                            $<?php echo $row2['product_price']; ?>
+                          ₩<?php echo $row2['product_price']; ?>
                           </del>
                         </div>
                       </div>
@@ -317,8 +317,8 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">$<?php echo $row1['discounted_price']; ?></p>
-                        <del>$<?php echo $row1['product_price']; ?></del>
+                        <p class="price">₩<?php echo $row1['discounted_price']; ?></p>
+                        <del>₩<?php echo $row1['product_price']; ?></del>
                       </div>
                     </div>
                   </div>
@@ -362,10 +362,10 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                            $<?php echo $row2['discounted_price']; ?>
+                          ₩<?php echo $row2['discounted_price']; ?>
                           </p>
                           <del>
-                            $<?php echo $row2['product_price']; ?>
+                          ₩<?php echo $row2['product_price']; ?>
                           </del>
                         </div>
                       </div>
@@ -417,8 +417,8 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">$<?php echo $row1['discounted_price']; ?></p>
-                        <del>$<?php echo $row1['product_price']; ?></del>
+                        <p class="price">₩<?php echo $row1['discounted_price']; ?></p>
+                        <del>₩<?php echo $row1['product_price']; ?></del>
                       </div>
                     </div>
                   </div>
@@ -462,10 +462,10 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                            $<?php echo $row2['discounted_price']; ?>
+                          ₩<?php echo $row2['discounted_price']; ?>
                           </p>
                           <del>
-                            $<?php echo $row2['product_price']; ?>
+                          ₩<?php echo $row2['product_price']; ?>
                           </del>
                         </div>
                       </div>
@@ -585,10 +585,10 @@ $product_left = array();
 
                   <div class="price-box">
                     <p class="price">
-                      $<?php echo $row['discounted_price'] ?>
+                    ₩<?php echo $row['discounted_price'] ?>
                     </p>
                     <del>
-                      $<?php echo $row['product_price'] ?>
+                    ₩<?php echo $row['product_price'] ?>
                     </del>
                   </div>
                 </div>
@@ -688,7 +688,7 @@ $product_left = array();
 
             <h2 class="cta-title">Collection</h2>
 
-            <p class="cta-text">Starting $20</p>
+            <p class="cta-text">Starting ₩20</p>
 
             <button class="cta-btn">Shop now</button>
           </a>

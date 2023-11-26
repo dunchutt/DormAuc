@@ -131,12 +131,12 @@ if($product_category == "deal_of_day"){
                 <div class="product_title"><strong>Price:</strong></div>
                 <div class="product_detail">
                   <div class="price-box">
-                    <p class="price">$<?php echo $product_price; ?></p>
+                    <p class="price">₩<?php echo $product_price; ?></p>
                     <input type="hidden" name="product_price" value = "<?php echo $product_price; ?>">
                     <input type="hidden" id="product_identity" name="product_id" value ="<?php echo $row['product_id']; ?>">
                     <input type="hidden" name="product_category" value ="<?php echo $product_category; ?>">
 
-                    <del>$<?php echo $row['product_price']; ?></del>
+                    <del>₩<?php echo $row['product_price']; ?></del>
                   </div>
                 </div>
               </div>

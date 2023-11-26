@@ -169,10 +169,10 @@
 
                   <div class="price-box">
                     <p class="price">
-                      $<?php echo $row['discounted_price'] ?>
+                    ₩<?php echo $row['discounted_price'] ?>
                     </p>
                     <del>
-                      $<?php echo $row['product_price'] ?>
+                    ₩<?php echo $row['product_price'] ?>
                     </del>
                   </div>
                 </div>

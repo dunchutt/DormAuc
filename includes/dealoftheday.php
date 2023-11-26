@@ -1,4 +1,4 @@
-        <?php
+<?php
          // Get all deals of the day
 $deals_of_the_day = get_deal_of_day();
         ?>
@@ -39,9 +39,9 @@ $deals_of_the_day = get_deal_of_day();
                     </p>
 
                     <div class="price-box">
-                      <p class="price">$ <?php echo $row['deal_net_price'] ?> </p>
+                      <p class="price">₩ <?php echo $row['deal_net_price'] ?> </p>
 
-                      <del>$<?php echo $row['deal_discounted_price'] ?></del>
+                      <del>₩<?php echo $row['deal_discounted_price'] ?></del>
                     </div>
 
                      <button class="add-cart-btn">Premium</button>

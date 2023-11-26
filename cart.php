@@ -105,7 +105,7 @@
       <img class="cart-product-image" src="./admin/upload/<?php echo $value['product_img'] ?>"  alt="">
       </td>
       <td><?php echo  $value['name']; ?></td>
-      <td><?php echo  "$".$value['price']; ?></td>
+      <td><?php echo  "₩".$value['price']; ?></td>
       <td ><?php echo $value['product_qty']; ?></td>
     </tr>
   
