@@ -33,31 +33,52 @@ require_once 'functions/functions.php';
       body {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         justify-content: center;
         align-items: center;
       }
-      form {
-        border: 1px solid red;
+      .red_menu_bar {
+        width: 100%;
+        height: 17vh;
+        background: rgba(195,13,25,1);
+      }
+
+      img {
+        padding-left: 45%;
+        padding-top: 3%; 
+      }
+
+      form {        
+        position: relative;
+        margin-top: 100px;
+        border: 3px solid rgba(195,13,25,1);
         width: 400px;
         padding: 25px;
         border-radius: 10px;
       }
       .logo-box {
-        padding: 10px;
+        width: 75%;
+        padding: 30px;
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
       }
-      #signup-btn {
+      
+      button{
         text-decoration: none;
-        color: white;
+        color: rgba(195,13,25,1);
       }
     </style>
   </head>
   <body>
-
+    
+    <div class="red_menu_bar">
+      <?php
+      $imagePath = 'admin\upload\knu-logo.png'; // Adjust the path based on your file structure
+      ?>
+      <img src="<?php echo $imagePath; ?>" alt="Example Image">
+    </div>
   	 <?php 
      if( !( isset( $_SESSION['id']))){
      ?>
@@ -120,7 +141,7 @@ require_once 'functions/functions.php';
         type="submit" 
         class="btn btn-primary"
         name="login">
-            Sign in
+            Log in
         </button>
       </div>
     </form>
