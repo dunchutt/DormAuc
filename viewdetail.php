@@ -128,7 +128,7 @@ if($product_category == "deal_of_day"){
               </div>
 
               <div class="product_description">
-                <div class="product_title"><strong>Price:</strong></div>
+                <div class="product_title"><strong>Highest Bid:</strong></div>
                 <div class="product_detail">
                   <div class="price-box">
                     <p class="price">₩<?php echo $product_price; ?></p>
@@ -137,18 +137,6 @@ if($product_category == "deal_of_day"){
                     <input type="hidden" name="product_category" value ="<?php echo $product_category; ?>">
 
                     <del>₩<?php echo $row['product_price']; ?></del>
-                  </div>
-                </div>
-              </div>
-              <div class="product_description">
-                <div class="product_title"><strong>Rating:</strong></div>
-                <div class="product_detail">
-                  <div class="showcase-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
                   </div>
                 </div>
               </div>
@@ -169,7 +157,7 @@ if($product_category == "deal_of_day"){
                 <div class="product_counter_btn_box">
                   <button type="button" class="btn_product_increment">+</button>
 
-                  <input class="input_product_quantity" type="number" style="width: 50px" max="7" min="1" value="1" name="product_qty"  id="p_qty"/>
+                  <input class="input_product_quantity" type="number" style="width: 100px" max="100000" min="1000" value="1000" name="product_qty"  id="p_qty"/>
 
                   <input type="hidden" name="product_id"  value="<?php echo $row['product_id']; ?> "  />
                   <button type="button" class="btn_product_decrement">-</button>
@@ -180,10 +168,8 @@ if($product_category == "deal_of_day"){
 
                
                 
-                <button type="submit" name="add_to_cart"   class="btn_product_cart" >
-                  Add to Cart
-                </button>
-                <button type="button" class="btn_but_product"> <a href="checkout.php" style="text-decoration:none; color:#FFFFFF"> Buy</a></button>
+                
+                <button type="button" class="btn_but_product"> <a href="checkout.php" style="text-decoration:none; color:#FFFFFF"> Bid</a></button>
 
          
           
@@ -219,30 +205,24 @@ if($product_category == "deal_of_day"){
 
 
 
+
+
 <script>
   let btn_product_decrement = document.querySelector('.btn_product_decrement');
   let btn_product_increment = document.querySelector('.btn_product_increment');
   let change_qty = document.getElementById('p_qty');
 
-  btn_product_decrement.addEventListener('click',function()
-  {
-    if( change_qty.value == 1)
-    {
-      change_qty.value = 1;
-    }
-    else{
-      change_qty.value = (change_qty.value)-1 ;
-
-    }
-  });
-  btn_product_increment.addEventListener('click',function()
-  {
-    change_qty.value = parseInt(change_qty.value)+1;
-   
-
+  btn_product_decrement.addEventListener('click', function () {
+    // Decrease quantity by 1000, but don't go below 1000
+    change_qty.value = Math.max(1000, parseInt(change_qty.value) - 1000);
   });
 
+  btn_product_increment.addEventListener('click', function () {
+    // Increase quantity by 1000
+    change_qty.value = parseInt(change_qty.value) + 1000;
+  });
 </script>
+
 
 
 </div>
