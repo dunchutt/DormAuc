@@ -135,8 +135,6 @@ if($product_category == "deal_of_day"){
                     <input type="hidden" name="product_price" value = "<?php echo $product_price; ?>">
                     <input type="hidden" id="product_identity" name="product_id" value ="<?php echo $row['product_id']; ?>">
                     <input type="hidden" name="product_category" value ="<?php echo $product_category; ?>">
-
-                    <del>₩<?php echo $row['product_price']; ?></del>
                   </div>
                 </div>
               </div>
@@ -158,24 +156,15 @@ if($product_category == "deal_of_day"){
                   <button type="button" class="btn_product_increment">+</button>
 
                   <input class="input_product_quantity" type="number" style="width: 100px" max="100000" min="1000" value="1000" name="product_qty"  id="p_qty"/>
-
+                  
                   <input type="hidden" name="product_id"  value="<?php echo $row['product_id']; ?> "  />
+                  
                   <button type="button" class="btn_product_decrement">-</button>
                   
                 </div>
                 <!-- submit -->
                 <div class="buy-and-cart-btn">
-
-               
-                
-                
-                <button type="button" class="btn_but_product"> <a href="checkout.php" style="text-decoration:none; color:#FFFFFF"> Bid</a></button>
-
-         
-          
-
-
-
+                  <button type="submit" name="add_to_cart"   class="btn_product_cart"> Bid</a></button>
                 </div>
           
 
@@ -232,6 +221,18 @@ if($product_category == "deal_of_day"){
 <!--  -->
 
 
-
+<?php
+   if(isset($_POST['add_to_cart'])){
+    //below sql will update user details inside sql table when update is clicked
+    include "includes/config.php";
+    $sql1 = "UPDATE products
+             SET product_price= '{$_POST['product_qty']}' WHERE product_id={$_GET['id']} ";
+    $conn->query($sql1);   
+    
+    $conn->close();
+    
+    
+   }
+?>
 
 <?php require_once './includes/footer.php'; ?>
