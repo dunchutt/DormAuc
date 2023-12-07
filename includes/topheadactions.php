@@ -63,26 +63,10 @@
            
 
             <!-- Favourite Counter -->
-            <button class="action-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-              <span class="count">0</span>
-            </button>
+            
 
             <!-- Cart Button -->
-	  <?php if(!(isset($_SESSION['logged-in']))){?>
-            
-            <button class="action-btn">
-              <a href="./cart.php" >
-                <ion-icon name="bag-handle-outline"></ion-icon>
-              </a>
-              <span class="count"> 
-              <?php
-                echo $total_cart_items ;
-              ?>
-              </span>
-            </button>
-
-    <?php } ?>
+	  
 
           </div>
         </div>
