@@ -100,7 +100,7 @@ $top_rated_products2 = get_top_rated_products();
                 <b><?php echo $row['banner_items_price']; ?></b>₩
               </p>
 
-              <a href="#" class="banner-btn">Shop now</a>
+      
             </div>
           </div>
 
@@ -646,9 +646,7 @@ $product_left = array();
     </div>
   </div>
 
-  <!--
-      - TESTIMONIALS, CTA & SERVICE
-    -->
+  
 
   
 
