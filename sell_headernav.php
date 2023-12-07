@@ -36,7 +36,7 @@
       style="text-transform: uppercase"
     >
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="../index.php">
+        <a class="navbar-brand text-white" href="index.php">
           <h2>Store</h2>
         </a>
         <button
@@ -53,37 +53,8 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a
-                class="nav-link active text-white"
-                aria-current="page"
-                href="post.php"
-              >
-                <h6>Admin Panel</h6>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-white" href="post.php">
-                <h6>Post</h6>
-              </a>
-            </li>
-            <li class="nav- text-white">
-              <a class="nav-link active text-white" href="catagory.php">
-                <h6>Catagory</h6>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-white" href="users.php">
-                <h6>Users</h6>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-white" href="settings.php">
-                <h6>Setting</h6>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-white" href="logout.php?">
-                <h6>Logout</h6>
+              <a class="nav-link active text-white" href="index.php?">
+                <h6>Home</h6>
               </a>
             </li>
           </ul>

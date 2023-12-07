@@ -28,7 +28,7 @@
 
   <!-- Form -->
     <form
-      action="save-post.php"
+      action="sell_save_post.php"
       method="POST"
       enctype="multipart/form-data"
       class="row g-3"
