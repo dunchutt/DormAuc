@@ -37,7 +37,7 @@
       <?php if(isset($_SESSION['id'])) { ?>
 
       <li class="menu-category" style="opacity:1">
-        <a href="profile.php?id=<?php echo (isset( $_SESSION['customer_name']))? $_SESSION['id']: 'unknown';?>" class="menu-title">
+        <a href="sell.php?id=<?php echo (isset( $_SESSION['customer_name']))? $_SESSION['id']: 'unknown';?>" class="menu-title">
           Sell
         </a>
       </li>
