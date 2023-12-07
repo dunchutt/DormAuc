@@ -16,7 +16,7 @@
       <?php if(isset($_SESSION['id'])) { ?>
 
       <li class="menu-category" style="opacity:1">
-        <a href="profile.php?id=<?php echo (isset( $_SESSION['customer_name']))? $_SESSION['id']: 'unknown';?>" class="menu-title">
+        <a href="cart.php?id=<?php echo (isset( $_SESSION['customer_name']))? $_SESSION['id']: 'unknown';?>" class="menu-title">
           Buy
         </a>
       </li>
