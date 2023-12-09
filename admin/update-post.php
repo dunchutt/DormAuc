@@ -120,7 +120,7 @@
       </div>
       <div class="col-12">
         <button type="submit" name="update" class="btn btn-primary">
-          Update
+          <a class="btn" href="post.php">Update</a>
         </button>
       </div>
     </form>
@@ -145,7 +145,8 @@
     $conn->query($sql1);   
     
     $conn->close();
-    header("Location:http://localhost/electronics_shop/admin/post.php?succesfullyUpdated");
+
+    #header("Location:http://localhost/dormauc/admin/post.php");
     
    }
 ?>

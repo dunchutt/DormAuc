@@ -1,10 +1,9 @@
 <?php 
     include_once('sell_headerNav.php');
-    
+    include_once('restriction.php');
  ?>
 
-<!-- <h4>All Posts</h4>
-<h5><a href="add-post.php">Add Post</a></h5> -->
+<!-- <h4>All Posts</h4>-->
 
     <div class="d-flex" style="justify-content: space-between; padding: 18px">
       <h1>PRODUCTS</h1>
@@ -42,10 +41,17 @@
                   //define from which row to start extracting data from database
                   $offset = ($page - 1) * $limit; //remember offset formula this is why we need page var here
 
-                   /* select query of post table for normal user */
-                $sql = "SELECT * FROM products WHERE product_author='{$_SESSION['customer_name']}'
-                        ORDER BY products.product_id DESC LIMIT {$offset},{$limit}";
-                  
+                  if($_SESSION["customer_role"] == 'admin'){
+                    /* select query of post table for admin user */
+                    //this will fetch product data in descending order with applied limitation per page
+                    $sql = "SELECT * FROM products
+                            ORDER BY products.product_id DESC LIMIT {$offset},{$limit}";
+
+                  }elseif($_SESSION["customer_role"] == 'normal'){
+                    /* select query of post table for normal user */
+                    $sql = "SELECT * FROM products WHERE product_author='{$_SESSION['customer_name']}'
+                            ORDER BY products.product_id DESC LIMIT {$offset},{$limit}";
+                  }
 
                   $result = $conn->query($sql) or die("Query Failed.");
                   //means if no of rows found on the basis of query is >0 then goes inside if
@@ -88,7 +94,7 @@
         </a>
       </td>
       <td>
-        <a class="fn_link" href="remove-post.php?id=<?php echo $row["product_id"] ?>">
+        <a class="fn_link" href="sell_removepost.php?id=<?php echo $row["product_id"] ?>">
         <i class='fa fa-trash'></i>
         </a>
       </td>
