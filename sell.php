@@ -89,7 +89,7 @@
       <td><?php echo $row["product_date"] ?></td>
       <td><?php echo  $row["product_author"] ?></td>
       <td>
-        <a class="fn_link" href="update-post.php?id=<?php echo $row["product_id"] ?>">
+        <a class="fn_link" href="sell_updatepost.php?id=<?php echo $row["product_id"] ?>">
         <i class='fa fa-edit'></i>
         </a>
       </td>
