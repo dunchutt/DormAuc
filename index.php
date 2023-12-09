@@ -97,7 +97,7 @@ $top_rated_products2 = get_top_rated_products();
               </h2>
 
               <p class="banner-text">starting at
-                <b><?php echo $row['banner_items_price']; ?></b>₩
+              ₩<b><?php echo $row['banner_items_price']; ?></b>
               </p>
 
       
@@ -215,8 +215,7 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">₩<?php echo $row1['discounted_price']; ?></p>
-                        <del>₩<?php echo $row1['product_price']; ?></del>
+                        <p class="price">₩<?php echo $row1['product_price']; ?>000</p>
                       </div>
                     </div>
                   </div>
@@ -261,11 +260,8 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                          ₩<?php echo $row2['discounted_price']; ?>
+                          ₩<?php echo $row2['product_price']; ?>000
                           </p>
-                          <del>
-                          ₩<?php echo $row2['product_price']; ?>
-                          </del>
                         </div>
                       </div>
                     </div>
@@ -317,8 +313,7 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">₩<?php echo $row1['discounted_price']; ?></p>
-                        <del>₩<?php echo $row1['product_price']; ?></del>
+                        <p class="price">₩<?php echo $row1['product_price']; ?>000</p>
                       </div>
                     </div>
                   </div>
@@ -362,11 +357,8 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                          ₩<?php echo $row2['discounted_price']; ?>
+                          ₩<?php echo $row2['product_price']; ?>000
                           </p>
-                          <del>
-                          ₩<?php echo $row2['product_price']; ?>
-                          </del>
                         </div>
                       </div>
                     </div>
@@ -417,8 +409,7 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">₩<?php echo $row1['discounted_price']; ?></p>
-                        <del>₩<?php echo $row1['product_price']; ?></del>
+                        <p class="price">₩<?php echo $row1['product_price']; ?>000</p>
                       </div>
                     </div>
                   </div>
@@ -462,11 +453,8 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                          ₩<?php echo $row2['discounted_price']; ?>
+                          ₩<?php echo $row2['product_price']; ?>000
                           </p>
-                          <del>
-                          ₩<?php echo $row2['product_price']; ?>
-                          </del>
                         </div>
                       </div>
                     </div>
@@ -585,11 +573,8 @@ $product_left = array();
 
                   <div class="price-box">
                     <p class="price">
-                    ₩<?php echo $row['discounted_price'] ?>
+                    ₩<?php echo $row['product_price'] ?>000
                     </p>
-                    <del>
-                    ₩<?php echo $row['product_price'] ?>
-                    </del>
                   </div>
                 </div>
               </div>

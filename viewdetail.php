@@ -118,7 +118,7 @@ if($product_category == "deal_of_day"){
 
                   <?php 
                     $product_name = $row['product_title'];
-                    $product_price = $row['discounted_price'];
+                    $product_price = $row['product_price'];
                   
                   
                   
@@ -131,7 +131,7 @@ if($product_category == "deal_of_day"){
                 <div class="product_title"><strong>Highest Bid:</strong></div>
                 <div class="product_detail">
                   <div class="price-box">
-                    <p class="price">₩<?php echo $product_price; ?></p>
+                    <p class="price">₩<?php echo $product_price; ?>000</p>
                     <input type="hidden" name="product_price" value = "<?php echo $product_price; ?>">
                     <input type="hidden" id="product_identity" name="product_id" value ="<?php echo $row['product_id']; ?>">
                     <input type="hidden" name="product_category" value ="<?php echo $product_category; ?>">

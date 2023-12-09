@@ -124,11 +124,8 @@ $items = get_items_by_category_items($category_ID);
 
                   <div class="price-box">
                     <p class="price">
-                    ₩<?php echo $row['discounted_price'] ?>
+                    ₩<?php echo $row['product_price'] ?>000
                     </p>
-                    <del>
-                    ₩<?php echo $row['product_price'] ?>
-                    </del>
                   </div>
                 </div>
               </div>
@@ -258,11 +255,8 @@ $items = get_items_by_category_items($category_ID);
 
                   <div class="price-box">
                     <p class="price">
-                      $<?php echo $row['discounted_price'] ?>
-                    </p>
-                    <del>
                       $<?php echo $row['product_price'] ?>
-                    </del>
+                    </p>
                   </div>
                 </div>
               </div>

@@ -36,8 +36,8 @@ if(isset($_FILES['prod-img'])){
     $today_date =  date("j,n,Y"); 
     $author = $_SESSION['customer_name'];
     $sql="INSERT INTO products 
-                      (product_catag,product_title,product_price,discounted_price,product_desc,product_date,product_img,product_left,product_author)
-               VALUES ('{$_POST['prod-category']}','{$_POST['prod-title']}','{$_POST['prod-price']}','{$_POST['prod-discount']}','{$_POST['prod-desc']}','{$today_date}','{$file_name}','{$_POST['noofitem']}','{$author}');";
+                      (product_catag,product_title,product_price,product_desc,product_date,product_img,product_left,product_author)
+               VALUES ('{$_POST['prod-category']}','{$_POST['prod-title']}','{$_POST['prod-price']}','{$_POST['prod-desc']}','{$today_date}','{$file_name}','{$_POST['noofitem']}','{$author}');";
     $result = $conn->query($sql);
     $conn->close();
     header("location:post.php?success");

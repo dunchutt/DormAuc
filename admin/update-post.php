@@ -12,7 +12,6 @@
     $_SESSION['previous_desc'] = $row['product_desc'];
     $_SESSION['previous_catag'] = $row['product_catag'];
     $_SESSION['previous_price'] = $row['product_price'];
-    $_SESSION['previous_discount'] = $row['discounted_price'];
     $_SESSION['previous_no'] = $row['product_left'];
     $_SESSION['previous_img'] = $row['product_img'];
     $conn->close();
@@ -59,7 +58,7 @@
           value="<?php echo $_SESSION['previous_price'] ?>"
         />
       </div>
-      <div class="col-md-6">
+      <!--<div class="col-md-6">
         <label for="inputPassword4" class="form-label">Discount</label>
         <input
           class="form-control"
@@ -67,7 +66,7 @@
           name="discount"
           value="<?php echo $_SESSION['previous_discount'] ?>"
         />
-      </div>
+      </div>-->
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"
           >Description</label
@@ -137,7 +136,6 @@
              SET  product_title= '{$_POST['title']}' ,
                   product_catag= '{$_POST['catag']}' ,
                   product_price= '{$_POST['price']}' ,
-                  discounted_price= '{$_POST['discount']}',
                   product_desc= '{$_POST['desc']}',
                   product_img= '{$_POST['newimg']}',
                   product_left= '{$_POST['noofitem']}' 
