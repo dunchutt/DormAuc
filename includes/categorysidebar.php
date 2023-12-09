@@ -312,9 +312,9 @@ $bags = get_bags_category();
               </div>
 
               <div class="price-box">
-                <del>$<?php
+                <del>₩<?php
                       echo $row['product_price'] ?></del>
-                <p class="price">$<?php
+                <p class="price">₩<?php
                                   echo $row['product_price']
                                   ?></p>
               </div>
