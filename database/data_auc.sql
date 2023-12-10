@@ -336,6 +336,18 @@ INSERT INTO `perfume` (`id`, `perfume_category_name`, `perfume_category_quantity
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `bid`
+--
+CREATE TABLE `bid` (
+  `bid_id` int(100) NOT NULL AUTO_INCREMENT,
+  `product_id` int(100) NOT NULL,
+  `customer_id` int(100) NOT NULL,
+  `bid_amount` int(100) NOT NULL,
+  PRIMARY KEY (`bid_id`)
+) 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
