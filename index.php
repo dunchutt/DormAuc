@@ -524,24 +524,8 @@ $product_left = array();
                   <img src="./admin/upload/<?php
                                                       echo $row['product_img']
                                                       ?>" alt="Mens Winter Leathers Jackets" width="300" class="product-img hover" />
-                  <!-- Applying coditions on dicount and sale tags  -->
-                  <!--  -->
-                  <?php
-                  if ($new_product_counter == 1) {
-                  ?>
-                    <p class="showcase-badge">15%</p>
-                  <?php
-                  }
-                  ?>
-                  <!--  -->
-                  <?php
-                  if ($new_product_counter == 3) {
-                  ?>
-                    <p class="showcase-badge angle black">sale</p>
-                  <?php
-                  }
-                  ?>
-
+                  
+                  
                 </div>
 
                 <div class="showcase-content">

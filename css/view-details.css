@@ -37,14 +37,41 @@ input[type=number] {
     padding: 25px;
     
 }
-.product_image_box{
+.product_image_box {
     width: 40%;
     height: 450px;
     display: flex;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    position: relative; /* Added for positioning the magnifier */
 }
+
+.img-magnifier-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.img-magnifier-glass {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+    border-radius: 5%;
+    cursor: none;
+    width: 20px;
+    height: 20px;
+}
+
+.img-magnifier-glass:hover {
+    opacity: 1;
+    border-radius: 10%;
+    cursor: none;
+    width: 130px;
+    height: 130px;
+}
+
 .product_detail_box{
     width: 50%;
     display: flex;
