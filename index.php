@@ -215,7 +215,7 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">₩<?php echo $row1['product_price']; ?>000</p>
+                        <p class="price">₩<?php echo $row1['product_price']; ?></p>
                       </div>
                     </div>
                   </div>
@@ -260,7 +260,7 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                          ₩<?php echo $row2['product_price']; ?>000
+                          ₩<?php echo $row2['product_price']; ?>
                           </p>
                         </div>
                       </div>
@@ -313,7 +313,7 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">₩<?php echo $row1['product_price']; ?>000</p>
+                        <p class="price">₩<?php echo $row1['product_price']; ?></p>
                       </div>
                     </div>
                   </div>
@@ -357,7 +357,7 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                          ₩<?php echo $row2['product_price']; ?>000
+                          ₩<?php echo $row2['product_price']; ?>
                           </p>
                         </div>
                       </div>
@@ -409,7 +409,7 @@ $top_rated_products2 = get_top_rated_products();
                       </a>
 
                       <div class="price-box">
-                        <p class="price">₩<?php echo $row1['product_price']; ?>000</p>
+                        <p class="price">₩<?php echo $row1['product_price']; ?></p>
                       </div>
                     </div>
                   </div>
@@ -453,7 +453,7 @@ $top_rated_products2 = get_top_rated_products();
 
                         <div class="price-box">
                           <p class="price">
-                          ₩<?php echo $row2['product_price']; ?>000
+                          ₩<?php echo $row2['product_price']; ?>
                           </p>
                         </div>
                       </div>
@@ -557,7 +557,7 @@ $product_left = array();
 
                   <div class="price-box">
                     <p class="price">
-                    ₩<?php echo $row['product_price'] ?>000
+                    ₩<?php echo $row['product_price'] ?>
                     </p>
                   </div>
                 </div>

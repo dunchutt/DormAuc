@@ -2,16 +2,26 @@
 <?php require_once './includes/topheadactions.php'; ?>
 <?php require_once './includes/mobilenav.php'; ?>
 
-<header>
-  <?php require_once './includes/topheadactions.php'; ?>
-  <?php require_once './includes/desktopnav.php' ?>
-  <?php require_once './includes/mobilenav.php'; ?>
-</header>
-
 <?php
+
+
 
 $sql1 = "SELECT * FROM products";
 $result1 = mysqli_query($conn, $sql1) or die("Query Failed.");
+//getting the user_id  from the session
+$user_id = $_SESSION['id']; 
+// fetching the customer id from the table using the user_id
+$fetch_customer_id_sql = "SELECT customer_id FROM customer WHERE customer_id = '$user_id'";
+$result_customer_id = mysqli_query($conn, $fetch_customer_id_sql);
+
+if ($result_customer_id && mysqli_num_rows($result_customer_id) > 0) {
+    $customer_row = mysqli_fetch_assoc($result_customer_id);
+    $customer_id = $customer_row['customer_id'];
+} else {
+    // Handle the case when customer_id is not found
+    echo "Error fetching customer_id: " . mysqli_error($conn);
+    exit();
+}
 
 $product_ID = $_GET['id'];
 $product_category = $_GET['category'];
@@ -51,6 +61,36 @@ if ($item && mysqli_num_rows($item) > 0) {
   // Handle the case when the product is not found
   echo "Product not found";
 }
+
+// Handle bid placement when the form is submitted
+if (isset($_POST['place_bid'])) {
+    // Handle bid functionality and database insertion here
+    $bid_amount = $_POST['bid_amount'];
+    $customer_id = $_SESSION['id']; // Assuming you have a customer_id in your session
+
+    // Validate and sanitize input as needed
+
+    // Insert bid information into the bid table
+    if (!is_numeric($bid_amount) || $bid_amount <= 0) {
+      echo '<script>alert("Invalid bid amount");</script>';
+    } else
+    {
+    $insert_bid_sql = "INSERT INTO bid (bid_amount, product_id, customer_id) VALUES ('$bid_amount', '$product_ID', '$customer_id')";
+    $result_insert_bid = mysqli_query($conn, $insert_bid_sql);
+    // Check if the bid insertion was successful
+    if ($result_insert_bid) {
+      echo '<script>alert("Bid placed successfully");</script>';
+  } else {
+    echo '<script>alert("Error placing bid");</script>';
+  }
+  $product_price = $_POST['product_price'];
+  if ($bid_amount > $product_price) {
+    $product_price=$bid_amount;
+    echo '<script>alert("Congratulations! Highest bid is changed successfully");</script>';
+  }
+    }
+    
+}
 ?>
 
 <div class="overlay" data-overlay></div>
@@ -60,7 +100,7 @@ if ($item && mysqli_num_rows($item) > 0) {
     <?php require_once 'includes/categorysidebar.php' ?>
 
     <div class="content">
-      <form action="place_bid.php" method="post" class='view-form'>
+      <form action="" method="post" class='view-form'>
         <div class="product_image_box" style="background-image: url('./admin/upload/<?php //echo $row['product_img'] ?>')"></div>
         <input type="hidden" name="product_img" value="<?php echo $row['product_img'] ?>">
         <?php include_once './product.php'; ?>
@@ -80,7 +120,7 @@ if ($item && mysqli_num_rows($item) > 0) {
               <div class="product_title"><strong>Highest Bid:</strong></div>
               <div class="product_detail">
                 <div class="price-box">
-                  <p class="price">₩<?php echo $product_price; ?>000</p>
+                  <p class="price">₩<?php echo $product_price; ?></p>
                   <input type="hidden" name="product_price" value="<?php echo $product_price; ?>">
                   <input type="hidden" id="product_identity" name="product_id" value="<?php echo $row['product_id']; ?>">
                   <input type="hidden" name="product_category" value="<?php echo $product_category; ?>">
@@ -102,15 +142,15 @@ if ($item && mysqli_num_rows($item) > 0) {
               <label for="bid_amount">Bid Amount:</label>
               <input type="text" name="bid_amount" id="bid_amount" required>
               <button type="submit" name="place_bid" class="btn_product_cart">Place Bid</button>
-              
             </div>
-            <?php include_once 'place_bid.php'; ?>
+            
           </div>
         </div>
       </form>
     </div>
   </div>
 </div>
+
 
 <script>
   let btn_product_decrement = document.querySelector('.btn_product_decrement');
@@ -125,27 +165,21 @@ if ($item && mysqli_num_rows($item) > 0) {
     change_qty.value = parseInt(change_qty.value) + 1000;
   });
 </script>
-
-<?php
+<!--php
 if (isset($_POST['place_bid'])) {
-  $user_id = $_SESSION['user_id']; // Assuming you have a user ID in the session
+ 
   $product_id = $_POST['product_id'];
   $bid_amount = $_POST['bid_amount'];
 
   if (!is_numeric($bid_amount) || $bid_amount <= 0) {
     echo '<script>alert("Invalid bid amount");</script>';
   } else {
-    $sql = "INSERT INTO bids (product_id, user_id, bid_amount) VALUES ('$product_id', '$user_id', '$bid_amount')";
+    $sql = "INSERT INTO bid (product_id, user_id, bid_amount) VALUES ('$product_id', '$user_id', '$bid_amount')";
     $result = mysqli_query($conn, $sql);
 
-    if ($result) {
-      echo '<script>alert("Bid placed successfully");</script>';
-    } else {
-      echo '<script>alert("Error placing bid");</script>';
-    }
+    
   }
 }
 ?>
-
-<?php require_once './includes/footer.php'; ?>
-
+-->
+<?php require_once './includes/footer.php'; ?>

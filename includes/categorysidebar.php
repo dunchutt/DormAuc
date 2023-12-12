@@ -314,7 +314,7 @@ $bags = get_bags_category();
               <div class="price-box">
                 <p class="price">₩<?php
                                   echo $row['product_price']
-                                  ?>000</p>
+                                  ?></p>
               </div>
             </div>
           </div>
