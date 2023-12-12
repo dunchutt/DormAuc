@@ -124,7 +124,7 @@ $items = get_items_by_category_items($category_ID);
 
                   <div class="price-box">
                     <p class="price">
-                    ₩<?php echo $row['product_price'] ?>000
+                    ₩<?php echo $row['product_price'] ?>
                     </p>
                   </div>
                 </div>

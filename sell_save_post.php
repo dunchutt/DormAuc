@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
             $error = true;
         } else {
             // If everything is okay, move the file to the upload directory
-            move_uploaded_file($file_tmp, "upload/" . $file_name);
+            move_uploaded_file($file_tmp, "admin/upload/" . $file_name);
         }
     } else {
         echo "No image file uploaded.";

@@ -1,48 +1,50 @@
 <?php
-      $total_cart_items = 0;
-     if(isset($_SESSION['mycart']))
-     {
-      $total_cart_items = count($_SESSION['mycart']);
-     }
-    
+    $total_cart_items = 0;
+    if(isset($_SESSION['mycart'])) {
+        $total_cart_items = count($_SESSION['mycart']);
+    }
+?>
 
-     ?>
- 
- <!-- mobile bottom navigation -->
-      <div class="mobile-bottom-navigation">
-        <button class="action-btn" data-mobile-menu-open-btn>
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
+<!-- mobile bottom navigation -->
+<div class="mobile-bottom-navigation">
+    <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+    </button>
 
-        <button class="action-btn">
-          <a href="./cart.php">
+    <button class="action-btn">
+        <a href="./cart.php">
             <ion-icon name="bag-handle-outline"></ion-icon>
-          </a>
+        </a>
 
-          <span class="count">
-            <?php
-            echo $total_cart_items;
+        <span class="count">
+            <?php echo $total_cart_items; ?>
+        </span>
+    </button>
 
-            ?>
-          </span>
-        </button>
-
-        <button class="action-btn">
-          <a href="./index.php">
+    <button class="action-btn">
+        <a href="./index.php">
             <ion-icon name="home-outline"></ion-icon>
-          </a>
-        </button>
+        </a>
+    </button>
 
-        <button class="action-btn">
-          <ion-icon name="heart-outline"></ion-icon>
+    <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="count">0</span>
+    </button>
 
-          <span class="count">0</span>
-        </button>
+    <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+    </button>
+</div>
 
-        <button class="action-btn" data-mobile-menu-open-btn>
-          <ion-icon name="grid-outline"></ion-icon>
-        </button>
-      </div>
+<?php
+    if (!headers_sent()) {
+        // Check if headers are not already sent
+        session_start(); // Ensure session is started before output
+    }
+?>
+
+
 
       <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
         <div class="menu-top">

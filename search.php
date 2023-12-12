@@ -169,7 +169,7 @@
 
                   <div class="price-box">
                     <p class="price">
-                    ₩<?php echo $row['product_price'] ?>000
+                    ₩<?php echo $row['product_price'] ?>
                     </p>
                   </div>
                 </div>

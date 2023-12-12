@@ -53,15 +53,6 @@
           required="required"
         />
       </div>
-      <!--<div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Discount</label>
-        <input
-          name="prod-discount"
-          type="number"
-          class="form-control"
-          required="required"
-        />
-      </div>-->
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"
           >Description</label

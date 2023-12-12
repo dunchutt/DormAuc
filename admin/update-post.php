@@ -58,15 +58,6 @@
           value="<?php echo $_SESSION['previous_price'] ?>"
         />
       </div>
-      <!--<div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Discount</label>
-        <input
-          class="form-control"
-          type="number"
-          name="discount"
-          value="<?php echo $_SESSION['previous_discount'] ?>"
-        />
-      </div>-->
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"
           >Description</label
