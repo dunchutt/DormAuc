@@ -86,9 +86,14 @@
       <div class="col-md-6">
         <label for="inputState" class="form-label">Category</label>
         <select name="prod-category" value="" class="form-select">
-          <option value="all" selected>All</option>
-          <option value="men">Men</option>
-          <option value="women">Women</option>
+          <option value="bedding_set">Bedding Set</option>
+          <option value="accessories">Accessories</option>
+          <option value="laundry">Laundry</option>
+          <option value="utensils">Utensils</option>
+          <option value="organisers">Organisers</option>
+          <option value="stationery">Stationery</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing and shoes">Clothing and Shoes</option>
         </select>
       </div>
       <div class="col-12">
