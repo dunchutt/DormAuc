@@ -476,7 +476,7 @@ $top_rated_products2 = get_top_rated_products();
             - PRODUCT FEATURED
           -->
 
-<?php require_once './includes/dealoftheday.php' ?>
+
 
 
         <!--

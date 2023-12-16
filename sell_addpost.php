@@ -53,6 +53,15 @@
           required="required"
         />
       </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Deadline</label>
+        <input
+          name="prod-deadline"
+          type="date"
+          class="form-control"
+          required="required"
+        />
+      </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"
           >Description</label

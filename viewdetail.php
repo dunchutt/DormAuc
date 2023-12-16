@@ -33,6 +33,7 @@ if ($product_ID === null || $product_category === null) {
 
 $product_name = '';
 $product_price = '';
+$deadline = '';
 
 if ($product_category == "deal_of_day") {
   $item = get_deal_of_day_by_id($product_ID);
@@ -51,6 +52,10 @@ if ($item && mysqli_num_rows($item) > 0) {
 
   if (isset($row['product_price'])) {
     $product_price = $row['product_price'];
+  }
+
+  if (isset($row['deadline'])) {
+    $deadline = $row['deadline'];
   }
 
   if (isset($row['product_img'])) {
@@ -73,7 +78,8 @@ if (isset($_POST['place_bid'])) {
     // Insert bid information into the bid table
     if (!is_numeric($bid_amount) || $bid_amount <= 0) {
       echo '<script>alert("Invalid bid amount");</script>';
-    } else
+    }
+    else
     {
     $insert_bid_sql = "INSERT INTO bid (bid_amount, product_id, customer_id) VALUES ('$bid_amount', '$product_ID', '$customer_id')";
     $result_insert_bid = mysqli_query($conn, $insert_bid_sql);
@@ -122,6 +128,15 @@ if (isset($_POST['place_bid'])) {
               </div>
             </div>
 
+            <div class="prouduct_information">
+            <div class="product_description">
+              <div class="product_title"><strong>Last Date:</strong></div>
+              <div class="product_detail">
+                <?php echo ucfirst($deadline); ?>
+                <input type="hidden" name='product_name' id='product_name' value="<?php echo $deadline; ?>">
+              </div>
+            </div>
+
             <div class="product_description">
               <div class="product_title"><strong>Highest Bid:</strong></div>
               <div class="product_detail">
@@ -135,20 +150,12 @@ if (isset($_POST['place_bid'])) {
             </div>
           </div>
 
-          <div class="product_counter_box">
-            <div class="product_counter_btn_box">
-              <button type="button" class="btn_product_increment">+</button>
-              <input class="input_product_quantity" type="number" style="width: 100px" max="100000" min="1000"
-                value="1000" name="product_qty" id="p_qty" />
-              <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?> " />
-              <button type="button" class="btn_product_decrement">-</button>
-            </div>
-
             <div class="buy-and-cart-btn">
               <label for="bid_amount">Bid Amount:</label>
               <input type="text" name="bid_amount" id="bid_amount" required>
               <button type="submit" name="place_bid" class="btn_product_cart">Place Bid</button>
             </div>
+            
             
           </div>
         </div>
@@ -157,6 +164,9 @@ if (isset($_POST['place_bid'])) {
   </div>
 </div>
 
+<?php
+  $redirectUrl = 'cart.php';
+?>
 
 <script>
   let btn_product_decrement = document.querySelector('.btn_product_decrement');
@@ -171,21 +181,5 @@ if (isset($_POST['place_bid'])) {
     change_qty.value = parseInt(change_qty.value) + 1000;
   });
 </script>
-<!--php
-if (isset($_POST['place_bid'])) {
- 
-  $product_id = $_POST['product_id'];
-  $bid_amount = $_POST['bid_amount'];
 
-  if (!is_numeric($bid_amount) || $bid_amount <= 0) {
-    echo '<script>alert("Invalid bid amount");</script>';
-  } else {
-    $sql = "INSERT INTO bid (product_id, user_id, bid_amount) VALUES ('$product_id', '$user_id', '$bid_amount')";
-    $result = mysqli_query($conn, $sql);
-
-    
-  }
-}
-?>
--->
-<?php require_once './includes/footer.php'; ?>
+<?php require_once './includes/footer.php';?>

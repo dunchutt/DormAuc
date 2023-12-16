@@ -12,6 +12,7 @@
     $_SESSION['previous_desc'] = $row['product_desc'];
     $_SESSION['previous_catag'] = $row['product_catag'];
     $_SESSION['previous_price'] = $row['product_price'];
+    $_SESSION['previous_deadline'] = $row['deadline'];
     $_SESSION['previous_no'] = $row['product_left'];
     $_SESSION['previous_img'] = $row['product_img'];
     $conn->close();
@@ -56,6 +57,15 @@
           type="number"
           name="price"
           value="<?php echo $_SESSION['previous_price'] ?>"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Deadline</label>
+        <input
+          class="form-control"
+          type="date"
+          name="prod-deadline"
+          value="<?php echo $_SESSION['previous_deadline'] ?>"
         />
       </div>
       <div class="mb-3">

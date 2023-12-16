@@ -41,7 +41,7 @@ if (!$error) {
 
     // Prepare and execute the SQL query
     $sql = "INSERT INTO products 
-            (product_catag, product_title, product_price, product_desc, product_date, product_img, product_left, product_author)
+            (product_catag, product_title, product_price, product_desc, product_date, product_img, product_left, product_author,deadline)
             VALUES (
                 '{$_POST['prod-category']}',
                 '{$_POST['prod-title']}',
@@ -50,7 +50,8 @@ if (!$error) {
                 '{$today_date}',
                 '{$file_name}',
                 '{$_POST['noofitem']}',
-                '{$author}'
+                '{$author}',
+                '{$_POST['prod-deadline']}'
             )";
 
     if ($conn->query($sql) === true) {
