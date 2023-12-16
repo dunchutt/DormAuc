@@ -86,7 +86,13 @@ if (isset($_POST['place_bid'])) {
   $product_price = $_POST['product_price'];
   if ($bid_amount > $product_price) {
     $product_price=$bid_amount;
+    include "includes/config.php";
+    $sql1 = "UPDATE products
+             SET  product_price= '{$_POST['bid_amount']}'    
+             WHERE product_id={$_GET['id']} ";
+    $conn->query($sql1); 
     echo '<script>alert("Congratulations! Highest bid is changed successfully");</script>';
+      
   }
     }
     
