@@ -9,7 +9,7 @@
 
   <!-- ... (your body content) ... -->
 
-  <footer style="margin-top: 70px; margin-bottom: 0;">
+  <footer style="margin-top: 40px; margin-bottom: 0;">
     <div class="footer-category">
       <div class="container">
         <!-- ... (your category boxes) ... -->

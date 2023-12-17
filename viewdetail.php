@@ -2,6 +2,7 @@
 <?php require_once './includes/topheadactions.php'; ?>
 <?php require_once './includes/mobilenav.php'; ?>
 
+
 <?php
 
 
@@ -56,6 +57,10 @@ if ($item && mysqli_num_rows($item) > 0) {
 
   if (isset($row['deadline'])) {
     $deadline = $row['deadline'];
+  }
+
+  if (isset($row['product_desc'])) {
+    $product_desc = $row['product_desc'];
   }
 
   if (isset($row['product_img'])) {
@@ -127,8 +132,9 @@ if (isset($_POST['place_bid'])) {
                 <input type="hidden" name='product_name' id='product_name' value="<?php echo $product_name; ?>">
               </div>
             </div>
+          </div>
 
-            <div class="prouduct_information">
+          <div class="prouduct_information">
             <div class="product_description">
               <div class="product_title"><strong>Last Date:</strong></div>
               <div class="product_detail">
@@ -150,14 +156,29 @@ if (isset($_POST['place_bid'])) {
             </div>
           </div>
 
-            <div class="buy-and-cart-btn">
+          <div class="buy-and-cart-btn">
+            <div style="margin-top: 30px; margin-left: 0px">
               <label for="bid_amount">Bid Amount:</label>
+            </div>
+            <div style="margin-top: 30px; margin-left: 5px">
               <input type="text" name="bid_amount" id="bid_amount" required>
+            </div>
+            <div style="margin-top: 13px; margin-left: 5px">
               <button type="submit" name="place_bid" class="btn_product_cart">Place Bid</button>
             </div>
-            
-            
           </div>
+
+          <!-- Add the product description section here -->
+          <div class="product_description">
+            <div class="product_title"><strong>Description:</strong></div>
+            <div class="product_detail">
+              <?php echo ucfirst($product_desc); ?>
+              <input type="hidden" name='product_description' id='product_description' value="<?php echo $product_desc; ?>">
+            </div>
+          </div>
+            
+            
+          
         </div>
       </form>
     </div>
