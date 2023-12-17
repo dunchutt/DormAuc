@@ -14,15 +14,15 @@
       }
     
         .pimage{
-    /* border: 6px solid red; */
-      /* width: 40%;
-  height: 100%;
-  object-fit: scale-down; */
-    width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-     border-radius: 16px;
+          /* border: 6px solid red; */
+          /* width: 40%;
+          height: 100%;
+          object-fit: scale-down; */
+          width: 100%;
+          height: 100%;
+          -o-object-fit: contain;
+          object-fit: contain; /* Change object-fit property */
+          border-radius: 16px;
         
       }
         #image-pr{
@@ -36,8 +36,8 @@
           position:absolute;
          /*top:8%;
          left:20%;  */
-         /* width:100%;
-         height:100%
+          width:100%;
+          height:100%
                /* width: 65%;
       height: 450px; */
        }
@@ -143,9 +143,9 @@ function magnify(imgID, zoom) {
 <div class="product_image_box">
   <!-- <div class="img-magnifier-container"> -->
     <!-- <img class="pimage" id='image-pr' src="admin/upload/<?php echo $row['product_img'] ?>"  alt="product-img"> -->
-<div class="img-magnifier-container" style="width: 18rem;">
-  <img   class="pimage" id='image-pr' src="admin/upload/<?php echo $row['product_img'] ?>" alt="...">
-</div>
+  <div class="img-magnifier-container" style="width: 18rem;">
+    <img   class="pimage" id='image-pr' src="admin/upload/<?php echo $row['product_img'] ?>" alt="...">
+  </div>
   <!-- </div> -->
 </div>
 
@@ -155,7 +155,7 @@ function magnify(imgID, zoom) {
 <script>
 /* Initiate Magnify Function
 with the id of the image, and the strength of the magnifier glass:*/
-magnify("image-pr", 3);
+  magnify("image-pr", 3);
 </script>
 
 <script src="./js/increament.js"></script>

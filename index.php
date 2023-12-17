@@ -115,11 +115,11 @@ $top_rated_products2 = get_top_rated_products();
   <!--
       - CATEGORY: Bar 
     -->
-
+<!--
   <div class="category">
     <div class="container">
       <div class="category-item-container has-scrollbar">
-        <!--  -->
+       
         <?php
         while ($row = mysqli_fetch_assoc($catgeory_bar_products)) {
         ?>
@@ -137,7 +137,7 @@ $top_rated_products2 = get_top_rated_products();
                 <p class="category-item-amount">(<?php echo $row['category_quantity'] ?>)</p>
               </div>
 
-            <!-- updated it. set to form and will send data to search page -->
+            
                   <form class="search-form" method="post" action="./search.php">
                     <input type="hidden" name="search" value="<?php echo $row['category_title'] ?>" />
                         <button type="submit" name="submit" class="sidebar-submenu-title">
@@ -155,11 +155,13 @@ $top_rated_products2 = get_top_rated_products();
         ?>
 
 
-        <!--  -->
+       -->
 
       </div>
     </div>
   </div>
+
+   
 
   <!--
       - PRODUCT
@@ -175,308 +177,13 @@ $top_rated_products2 = get_top_rated_products();
 
 
       <div class="product-box">
-        <!--
-            - PRODUCT MINIMAL
-          -->
-
-        <div class="product-minimal">
-          <div class="product-showcase">
-            <h2 class="title">New Arrivals</h2>
-
-            <div class="showcase-wrapper has-scrollbar">
-              <!-- new arrival container 1 -->
-
-              <div class="showcase-container">
-                <!-- get element from table with id less than 4 -->
-                <?php
-                $itemID;
-                $counter = 0;
-                while ($row1 = mysqli_fetch_assoc($new_arrivals1)) {
-                  // prints 4 items and then break out
-                  if ($counter == 4) {
-                    break;
-                  }
-
-                ?>
-                  <div class="showcase">
-                    <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>" class="showcase-img-box">
-                      <img src="./admin/upload/<?php echo $row1['product_img']; ?>" alt="relaxed short full sleeve t-shirt" width="70" class="showcase-img" />
-                    </a>
-
-                    <div class="showcase-content">
-                      <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>">
-                        <h4 class="showcase-title">
-                          <?php echo $row1['product_title']; ?>
-                        </h4>
-                      </a>
-
-                      <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>" class="showcase-category">
-                        <?php echo "New Arrival!"; ?>
-                      </a>
-
-                      <div class="price-box">
-                        <p class="price">₩<?php echo $row1['product_price']; ?></p>
-                      </div>
-                    </div>
-                  </div>
-                <?php
-                  $itemID = $row1['product_id'];
-                  $counter += 1;
-                }
-                ?>
-
-
-              </div>
-              <!--  -->
-              <!-- new arrival container 2 -->
-              <div class="showcase-container">
-                <!-- get element from table with id greaer than 4 -->
-                <?php
-                // $itemID = 4;
-                $counter = 0;
-                while ($row2 = mysqli_fetch_assoc($new_arrivals2)) {
-                  // breaks after printing 4 items
-                  if ($counter == 4) {
-                    break;
-                  }
-                  if ($row2['product_id'] > $itemID) {
-
-                ?>
-                    <div class="showcase">
-                      <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>" class="showcase-img-box">
-                        <img src="./admin/upload/<?php echo $row2['product_img']; ?>" alt="men yarn fleece full-zip jacket" class="showcase-img" width="70" />
-                      </a>
-
-                      <div class="showcase-content">
-                        <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>">
-                          <h4 class="showcase-title">
-                            <?php echo $row2['product_title']; ?>
-                          </h4>
-                        </a>
-
-                        <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>" class="showcase-category">
-                          <?php echo "New Arrival!"; ?>
-                        </a>
-
-                        <div class="price-box">
-                          <p class="price">
-                          ₩<?php echo $row2['product_price']; ?>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                <?php
-                    $counter += 1;
-                  }
-                }
-                ?>
-
-                <!--  -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Trending Items -->
-          <div class="product-showcase">
-            <h2 class="title">Trending</h2>
-
-            <div class="showcase-wrapper has-scrollbar">
-              <!-- get data from trending table in db -->
-              <!-- trending container 1 -->
-              <div class="showcase-container">
-                <!-- get element from table with id less than 4 -->
-                <?php
-                $itemID;
-                $counter = 0;
-                while ($row1 = mysqli_fetch_assoc($trending_products1)) {
-                  // prints 4 items and then break out
-                  if ($counter == 4) {
-                    break;
-                  }
-
-                ?>
-                  <div class="showcase">
-                    <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>" class="showcase-img-box">
-                      <img src="./admin/upload/<?php echo $row1['product_img']; ?>" alt="Treding products image" width="70" class="showcase-img" />
-                    </a>
-
-                    <div class="showcase-content">
-                      <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>">
-                        <h4 class="showcase-title">
-                          <?php echo $row1['product_title']; ?>
-                        </h4>
-                      </a>
-
-                      <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>" class="showcase-category">
-                        <?php echo "Trending Now!"; ?>
-                      </a>
-
-                      <div class="price-box">
-                        <p class="price">₩<?php echo $row1['product_price']; ?></p>
-                      </div>
-                    </div>
-                  </div>
-                <?php
-                  $itemID = $row1['product_id'];
-                  $counter += 1;
-                }
-                ?>
-
-
-              </div>
-              <!-- trending container 2 -->
-              <div class="showcase-container">
-                <!-- get element from table with id greaer than 4 -->
-                <?php
-                // $itemID = 4;
-                $counter = 0;
-                while ($row2 = mysqli_fetch_assoc($trending_products2)) {
-                  // breaks after printing 4 items
-                  if ($counter == 4) {
-                    break;
-                  }
-                  if ($row2['product_id'] > $itemID) {
-
-                ?>
-                    <div class="showcase">
-                      <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>" class="showcase-img-box">
-                        <img src="./admin/upload/<?php echo $row2['product_img']; ?>" alt="trending product image" class="showcase-img" width="70" />
-                      </a>
-
-                      <div class="showcase-content">
-                        <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>">
-                          <h4 class="showcase-title">
-                            <?php echo $row2['product_title']; ?>
-                          </h4>
-                        </a>
-
-                        <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>" class="showcase-category">
-                          <?php echo "Trending Now!"; ?>
-                        </a>
-
-                        <div class="price-box">
-                          <p class="price">
-                          ₩<?php echo $row2['product_price']; ?>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                <?php
-                    $counter += 1;
-                  }
-                }
-                ?>
-
-                <!--  -->
-              </div>
-              <!--  -->
-            </div>
-          </div>
-
-          <div class="product-showcase">
-            <h2 class="title">Top Rated</h2>
-            <!-- Load data from top rated table -->
-            <div class="showcase-wrapper has-scrollbar">
-              <!-- top rated container 1 -->
-              <div class="showcase-container">
-                <!-- get element from table with id less than 4 -->
-                <?php
-                $itemID;
-                $counter = 0;
-                while ($row1 = mysqli_fetch_assoc($top_rated_products1)) {
-                  // prints 4 items and then break out
-                  if ($counter == 4) {
-                    break;
-                  }
-
-                ?>
-                  <div class="showcase">
-                    <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>" class="showcase-img-box">
-                      <img src="./admin/upload/<?php echo $row1['product_img']; ?>" alt="relaxed short full sleeve t-shirt" width="70" class="showcase-img" />
-                    </a>
-
-                    <div class="showcase-content">
-                      <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>">
-                        <h4 class="showcase-title">
-                          <?php echo $row1['product_title']; ?>
-                        </h4>
-                      </a>
-
-                      <a href="./viewdetail.php?id=<?php echo $row1['product_id'] ?>&category=<?php echo $row1['category_id'] ?>" class="showcase-category">
-                        <?php echo "Top Rated!"; ?>
-                      </a>
-
-                      <div class="price-box">
-                        <p class="price">₩<?php echo $row1['product_price']; ?></p>
-                      </div>
-                    </div>
-                  </div>
-                <?php
-                  $itemID = $row1['product_id'];
-                  $counter += 1;
-                }
-                ?>
-
-
-              </div>
-              <!-- top rated conatiner 2 -->
-              <div class="showcase-container">
-                <!-- get element from table with id greaer than 4 -->
-                <?php
-                // $itemID = 4;
-                $counter = 0;
-                while ($row2 = mysqli_fetch_assoc($top_rated_products2)) {
-                  // breaks after printing 4 items
-                  if ($counter == 4) {
-                    break;
-                  }
-                  if ($row2['product_id'] > $itemID) {
-
-                ?>
-                    <div class="showcase">
-                      <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>" class="showcase-img-box">
-                        <img src="./admin/upload/<?php echo $row2['product_img']; ?>" alt="trending product image" class="showcase-img" width="70" />
-                      </a>
-
-                      <div class="showcase-content">
-                        <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>">
-                          <h4 class="showcase-title">
-                            <?php echo $row2['product_title']; ?>
-                          </h4>
-                        </a>
-
-                        <a href="./viewdetail.php?id=<?php echo $row2['product_id'] ?>&category=<?php echo $row2['category_id'] ?>" class="showcase-category">
-                          <?php echo "Top Rated!"; ?>
-                        </a>
-
-                        <div class="price-box">
-                          <p class="price">
-                          ₩<?php echo $row2['product_price']; ?>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                <?php
-                    $counter += 1;
-                  }
-                }
-                ?>
-
-                <!--  -->
-              </div>
-              <!--  -->
-            </div>
-          </div>
-        </div>
+        
 
         <!--
             - PRODUCT FEATURED
           -->
 
-<?php require_once './includes/dealoftheday.php' ?>
+
 
 
         <!--
@@ -484,7 +191,7 @@ $top_rated_products2 = get_top_rated_products();
           -->
 
         <div class="product-main">
-          <h2 class="title">New Products</h2>
+          <h2 class="title">Products</h2>
 
           <div class="product-grid">
 

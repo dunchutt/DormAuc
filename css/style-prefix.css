@@ -1,4 +1,4 @@
-/*-----------------------------------*\
+/*-----------------------------------*\x
   #style.css
 \*-----------------------------------*/
 
@@ -1975,8 +1975,8 @@ footer {
 }
 
 .footer-category {
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--black-shade);
 }
 
@@ -2055,7 +2055,7 @@ footer {
 
 .footer-nav .nav-title {
   position: relative;
-  color: var(--white);
+  color: #FFFFFF;
   font-size: var(--fs-7);
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -2079,7 +2079,7 @@ footer {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  color: var(--coolers-black);
+  color: #FFFFFF;
   font-size: var(--fs-7);
   text-transform: capitalize;
   -webkit-transition: var(--transition-timing);
@@ -2107,7 +2107,7 @@ footer {
 }
 
 .footer-nav-item .icon-box {
-  color: var(--coolers-black);
+  color: #FFFFFF;
   font-size: 25px;
 }
 
@@ -2132,7 +2132,8 @@ footer {
 .social-link .footer-nav-link { font-size: 25px; }
 
 .footer-bottom {
-  margin-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   text-align: center;
 }
 

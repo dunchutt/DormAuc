@@ -51,7 +51,7 @@
                   Welcome To <span id="about-title"><?php echo $_SESSION['web-name'];?></span>
                   </h2>
                   <p>
-                    <strong id="about-title"> <?php echo $_SESSION['web-name']; ?></strong> is a Professional eCommerce Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you the best of eCommerce, with a focus on dependability and Online Selling. We're working to turn our passion for eCommerce into a booming online website. We hope you enjoy our eCommerce as much as we enjoy offering them to you.
+                    <strong id="about-title"> </strong> Step into DormAuc, where innovation blends seamlessly with community spirit, changing how KNU students in Cheomseong-gwan dorm buy and sell. We're not your typical online store; we're a game-changer, working to create a lively and cooperative environment in university dorms. DormAuc is more than just a place to buy and sell; it's a promise to make dorm life community-driven and sustainable. We're here to make student transactions easy, encourage community participation, and promote eco-friendly choices. Join us in reshaping dorm living into a simpler, more connected, and sustainable experience.
                   </p>
                   <p style="font-weight: bold; text-align: center;">
                     Thanks For Visiting To <strong id="about-title"> <?php echo $_SESSION['web-name']; ?></strong>
