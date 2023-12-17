@@ -1,6 +1,19 @@
 <?php include_once('./includes/headerNav.php'); ?>
-<?php require_once './includes/topheadactions.php'; ?>
-<?php require_once './includes/mobilenav.php'; ?>
+<?php require_once ('./includes/topheadactions.php'); ?>
+<?php require_once ('./includes/mobilenav.php'); ?>
+
+<header>
+  <!-- top head action, search etc in php -->
+  <!-- inc/topheadactions.php -->
+  <?php require_once './includes/topheadactions.php'; ?>
+  <!-- desktop navigation -->
+  <!-- inc/desktopnav.php -->
+  <?php require_once './includes/desktopnav.php' ?>
+  <!-- mobile nav in php -->
+  <!-- inc/mobilenav.php -->
+  <?php require_once './includes/mobilenav.php'; ?>
+
+</header>
 
 
 <?php
@@ -115,15 +128,14 @@ if (isset($_POST['place_bid'])) {
 <div class="product-container category-side-bar-container">
   <div class="container">
     <?php require_once 'includes/categorysidebar.php' ?>
-
     <div class="content">
       <form action="" method="post" class='view-form'>
-        <div class="product_image_box" style="background-image: url('./admin/upload/<?php //echo $row['product_img'] ?>')"></div>
-        <input type="hidden" name="product_img" value="<?php echo $row['product_img'] ?>">
-        <?php include_once './product.php'; ?>
-
+    
         <div class="product_detail_box">
           <h3 class="product-detail-title"><?php echo strtoupper($product_name); ?></h3>
+          <div class="product_image_box" style="background-image: url('./admin/upload/<?php //echo $row['product_img'] ?>')"></div>
+          <input type="hidden" name="product_img" value="<?php echo $product_img?>">
+          <?php include_once './product.php'; ?>
           <div class="prouduct_information">
             <div class="product_description">
               <div class="product_title"><strong>Name:</strong></div>
@@ -133,6 +145,7 @@ if (isset($_POST['place_bid'])) {
               </div>
             </div>
           </div>
+
 
           <div class="prouduct_information">
             <div class="product_description">
@@ -156,6 +169,15 @@ if (isset($_POST['place_bid'])) {
             </div>
           </div>
 
+          <!-- Add the product description section here -->
+          <div class="product_description">
+            <div class="product_title"><strong>Description:</strong></div>
+            <div class="product_detail">
+              <?php echo ucfirst($product_desc); ?>
+              <input type="hidden" name='product_description' id='product_description' value="<?php echo $product_desc; ?>">
+            </div>
+          </div>
+
           <div class="buy-and-cart-btn">
             <div style="margin-top: 30px; margin-left: 0px">
               <label for="bid_amount">Bid Amount:</label>
@@ -168,14 +190,7 @@ if (isset($_POST['place_bid'])) {
             </div>
           </div>
 
-          <!-- Add the product description section here -->
-          <div class="product_description">
-            <div class="product_title"><strong>Description:</strong></div>
-            <div class="product_detail">
-              <?php echo ucfirst($product_desc); ?>
-              <input type="hidden" name='product_description' id='product_description' value="<?php echo $product_desc; ?>">
-            </div>
-          </div>
+
             
             
           
@@ -204,3 +219,4 @@ if (isset($_POST['place_bid'])) {
 </script>
 
 <?php require_once './includes/footer.php';?>
+

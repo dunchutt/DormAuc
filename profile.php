@@ -41,7 +41,7 @@
                       height: 40%;
                       color:rgb(32, 69, 32);
                       display:flex;
-                      /* align-items:center; */
+                      align-items:center; 
                       justify-content:center;
                      }
       #edit{
@@ -63,7 +63,7 @@
          color:dark;
       }
       h4 a{
-         text-alignment:center;
+         text-align:center;
          color:blue
       }
       #admin{
@@ -136,9 +136,7 @@
               <h5 class="card-title">PROFILE</h5>
 
               <!-- user edit button -->
-              <div style="float: left" class="col">
-                  <a class="btn btn-primary" href="#/profile/edit" id="edit_link1">Edit</a>
-              </div>
+             
               <br>
               <br>
               <!-- user edit -->

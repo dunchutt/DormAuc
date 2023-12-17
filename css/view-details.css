@@ -44,18 +44,20 @@ input[type=number] {
 } */
 .product_image_box {
     order: 1;
-    width: 30%;
+    width: 50%;
     height: 450px;
-    display: flex;
-    /*background-repeat: no-repeat;
+    display: flex; 
+    background-repeat: no-repeat;
     background-position: center; 
     background-size: contain;
-    flex-direction: row; */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     position: relative; /* Added for positioning the magnifier */
     box-sizing: border-box;
-    margin-right: 20px;
+    margin-left: 350px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 
 }
 
