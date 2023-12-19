@@ -303,13 +303,7 @@ $bags = get_bags_category();
                 </h4>
               </a>
 
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
+              
 
               <div class="price-box">
                 <p class="price">₩<?php
