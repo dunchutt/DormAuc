@@ -77,13 +77,6 @@ The website built using HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL offers 
 
 We would like to acknowledge the following repositories and their contributors for their valuable contributions to the development of our e-commerce website:
 
-## Front-end Template
-
-- Repository: [codewithsadee/anon-ecommerce-website](https://github.com/codewithsadee/anon-ecommerce-website) [https://github.com/ShahandFahad/E-Commerce.git]
-- Contributors:
-  - Sadee Samaraweera ([@codewithsadee](https://github.com/codewithsadee))
-
-We utilized the front-end template from the above repository as the foundation for the user-side of our e-commerce website. This template provided a solid starting point with its well-structured HTML, CSS, and JavaScript code, along with pre-designed components and responsive design elements.
 
 ## Admin Panel
 
