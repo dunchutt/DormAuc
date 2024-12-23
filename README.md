@@ -73,10 +73,6 @@ The admin-side of the e-commerce website includes the following key features:
 
 The website built using HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL offers a comprehensive set of features for both users and administrators. It provides an intuitive and visually appealing interface for customers to browse and purchase products, while administrators have the necessary tools to manage inventory, process orders, and track customer information.
 
-# E-commerce Website - Credit Section
-
-We would like to acknowledge the following repositories and their contributors for their valuable contributions to the development of our e-commerce website:
-
 
 ## Admin Panel
 
